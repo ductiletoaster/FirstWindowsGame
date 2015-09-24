@@ -5,7 +5,7 @@
 // Include dependecies
 #include<windows.h>
 #include<memory>
-#include"BlankDemo.h"
+#include"TriangleDemo.h"
 
 // Include the Direct3D Library file
 // I needed this for compiling in VC2015 community 
@@ -56,7 +56,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPWSTR cmdLine,
 	ShowWindow(hwnd, cmdShow);
 
 	// Initialize demo
-	BlankDemo demo;
+	TriangleDemo demo;
 	bool result = demo.Initialize(hInstance, hwnd); // Call inherited Intialize function in this case from (Dx11DemoBase)
 	if (result == false)
 		return -1;

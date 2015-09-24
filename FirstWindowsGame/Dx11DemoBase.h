@@ -22,6 +22,8 @@ class Dx11DemoBase {
 		virtual ~Dx11DemoBase();
 		bool Initialize(HINSTANCE hInstance, HWND hwnd);
 		void Shutdown();
+		//bool CompileD3DShader( char* filePath, char* entry, char* shaderModel, ID3DBlob** buffer );
+		bool CompileD3DShader(LPCWSTR filePath, char* entry, char* shaderModel, ID3DBlob** buffer);
 		virtual bool LoadContent();
 		virtual void UnloadContent();
 		virtual void Update(float dt) = 0;
