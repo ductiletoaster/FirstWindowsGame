@@ -1,7 +1,9 @@
 #include"TriangleDemo.h"
 //#include<xnamath.h>
 #include<DirectXMath.h>
+
 using namespace DirectX;
+
 struct VertexPos
 {
 	XMFLOAT3 pos;
@@ -29,8 +31,7 @@ bool TriangleDemo::LoadContent()
 	}
 
 	HRESULT d3dResult;
-	d3dResult = d3dDevice_->CreateVertexShader(vsBuffer->GetBufferPointer(),
-		vsBuffer->GetBufferSize(), 0, &solidColorVS_);
+	d3dResult = d3dDevice_->CreateVertexShader(vsBuffer->GetBufferPointer(), vsBuffer->GetBufferSize(), 0, &solidColorVS_);
 
 	if (FAILED(d3dResult))
 	{
@@ -45,8 +46,7 @@ bool TriangleDemo::LoadContent()
 	};
 
 	unsigned int totalLayoutElements = ARRAYSIZE(solidColorLayout);
-	d3dResult = d3dDevice_->CreateInputLayout(solidColorLayout, totalLayoutElements,
-		vsBuffer->GetBufferPointer(), vsBuffer->GetBufferSize(), &inputLayout_);
+	d3dResult = d3dDevice_->CreateInputLayout(solidColorLayout, totalLayoutElements, vsBuffer->GetBufferPointer(), vsBuffer->GetBufferSize(), &inputLayout_);
 	vsBuffer->Release();
 
 	if (FAILED(d3dResult))
@@ -62,8 +62,7 @@ bool TriangleDemo::LoadContent()
 		MessageBox(0, "Error loading pixel shader!", "Compile Error", MB_OK);
 		return false;
 	}
-	d3dResult = d3dDevice_->CreatePixelShader(psBuffer->GetBufferPointer(),
-		psBuffer->GetBufferSize(), 0, &solidColorPS_);
+	d3dResult = d3dDevice_->CreatePixelShader(psBuffer->GetBufferPointer(), psBuffer->GetBufferSize(), 0, &solidColorPS_);
 	psBuffer->Release();
 
 	if (FAILED(d3dResult))
@@ -92,7 +91,6 @@ bool TriangleDemo::LoadContent()
 	{
 		return false;
 	}
-
 	return true;
 }
 

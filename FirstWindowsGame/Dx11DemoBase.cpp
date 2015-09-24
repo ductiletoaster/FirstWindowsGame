@@ -1,6 +1,6 @@
 #include"Dx11DemoBase.h"
-#include"D3Dcompiler.h"
-#include"stdio.h"
+#include<D3Dcompiler.h>
+#include<stdio.h>
 
 // Constructor with member initialization list to initilize member variables
 Dx11DemoBase::Dx11DemoBase() : driverType_(D3D_DRIVER_TYPE_NULL), featureLevel_(D3D_FEATURE_LEVEL_11_0), d3dDevice_(0), d3dContext_(0), swapChain_(0), backBufferTarget_(0)
@@ -171,7 +171,6 @@ bool Dx11DemoBase::CompileD3DShader(LPCWSTR filePath, char* entry, char* shaderM
 		errorBuffer->Release();
 	return true;
 }
-
 bool Dx11DemoBase::LoadContent()
 {
 	// Override with demo specifics, if any...

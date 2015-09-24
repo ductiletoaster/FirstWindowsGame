@@ -11,7 +11,7 @@
 // I needed this for compiling in VC2015 community 
 // Alternatively you can add the lib under linker "Additional Dependencies"
 #pragma comment (lib, "d3d11.lib")
-//#pragma comment (lib, "d3dx11.lib")
+#pragma comment (lib, "d3dcompiler.lib")
 
 // Defines call back function to be used by lpfnWndProc
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
@@ -44,7 +44,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPWSTR cmdLine,
 	AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
 
 	// Create new handle to new window
-	HWND hwnd = CreateWindowA("DX11BookWindowClass", "Blank Win32 Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance, NULL);
+	HWND hwnd = CreateWindowA("DX11BookWindowClass", "2D Triangle in Direct3D 11", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance, NULL);
 
 	// Check if handle is valid
 	if (!hwnd)

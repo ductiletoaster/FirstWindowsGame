@@ -24,6 +24,9 @@
     <ClCompile Include="BlankDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TriangleDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dx11DemoBase.h">
@@ -32,5 +35,13 @@
     <ClInclude Include="BlankDemo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TriangleDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\SolidGreenColor.fx">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
