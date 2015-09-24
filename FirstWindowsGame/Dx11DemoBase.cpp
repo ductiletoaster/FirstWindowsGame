@@ -123,6 +123,7 @@ bool Dx11DemoBase::Initialize(HINSTANCE hInstance, HWND hwnd)
 	result = d3dDevice_->CreateRenderTargetView(backBufferTexture, 0, &backBufferTarget_);
 	if (backBufferTexture)
 		backBufferTexture->Release(); // Deallocate a resource
+
 	// Failed to create render view
 	if (FAILED(result))
 	{
@@ -150,9 +151,11 @@ bool Dx11DemoBase::Initialize(HINSTANCE hInstance, HWND hwnd)
 bool Dx11DemoBase::CompileD3DShader(LPCWSTR filePath, char* entry, char* shaderModel, ID3DBlob** buffer)
 {
 	DWORD shaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined( DEBUG ) || defined( _DEBUG )
+
+#if defined(DEBUG) || defined(_DEBUG)
 	shaderFlags |= D3DCOMPILE_DEBUG;
 #endif
+
 	ID3DBlob* errorBuffer = 0;
 	HRESULT result;
 	// result = D3DX11CompileFromFile( filePath, 0, 0, entry, shaderModel, shaderFlags, 0, 0, buffer, &errorBuffer, 0 );
