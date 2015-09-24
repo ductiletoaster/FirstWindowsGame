@@ -129,7 +129,7 @@
     <ClInclude Include="TriangleDemo.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\SolidGreenColor.fx">
+    <None Include="SolidGreenColor.fx">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>

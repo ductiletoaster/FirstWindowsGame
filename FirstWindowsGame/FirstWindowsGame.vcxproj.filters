@@ -40,7 +40,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\SolidGreenColor.fx">
+    <None Include="SolidGreenColor.fx">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
