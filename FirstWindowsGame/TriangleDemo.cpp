@@ -23,7 +23,7 @@ bool TriangleDemo::LoadContent()
 {
 	ID3DBlob* vsBuffer = 0;
 	//bool compileResult = CompileD3DShader( "SolidGreenColor.fx", "VS_Main", "vs_4_0", &vsBuffer );
-	bool compileResult = CompileD3DShader(L"SolidGreenColor.fx", "VS_Main", "vs4_0", &vsBuffer);
+	bool compileResult = CompileD3DShader(L"SolidGreenColor.fx", "VS_Main", "vs_4_0", &vsBuffer);
 	if (compileResult == false)
 	{
 		MessageBox(0, "Error loading vertex shader!", "Compile Error", MB_OK);
